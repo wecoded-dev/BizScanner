@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biz Tracker | BizSuit</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/hover.css/css/hover-min.css"/>
+
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .navbar {
+      background: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    }
+    .navbar-brand {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #00ffff !important;
+    }
+    .nav-link {
+      color: #ddd !important;
+      font-weight: 500;
+      position: relative;
+      transition: 0.3s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: -5px;
+      background: #00ffff;
+      transition: 0.4s;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    .nav-link:hover {
+      color: #00ffff !important;
+      transform: scale(1.05);
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('3418448.jpg') center/cover no-repeat fixed;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 4.5rem;
+      font-weight: 800;
+      color: #00ffff;
+      text-shadow: 0 0 30px #00ffffa0;
+      animation: fadeInDown 1.5s ease-out;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      color: #eee;
+      animation: fadeInUp 2s ease-out;
+    }
+    .btn-hero {
+      margin-top: 2rem;
+      padding: 0.8rem 2.5rem;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      border: 2px solid #00ffff;
+      background: transparent;
+      color: #00ffff;
+      font-weight: bold;
+      box-shadow: 0 0 20px #00ffff55;
+      transition: all 0.4s;
+    }
+    .btn-hero:hover {
+      background: #00ffff;
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    .glow-line {
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #00ffff, transparent);
+      animation: glowing 3s linear infinite;
+    }
+    @keyframes glowing {
+      0% { background-position: 0% }
+      100% { background-position: 100% }
+    }
+
+    footer {
+      background: #111;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-top: 2px solid #00ffff33;
+    }
+    footer p {
+      color: #aaa;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top animate__animated animate__fadeInDown">
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src="logo.png" height="75" width="130"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Stocks</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Shop Map</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Invoice Mint</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Expense Classifier</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content container">
+    <img src="Collab-amico.png" height="200" width="200"><br> &nbsp; <br> &nbsp; <br>
+    <h1 class="animate__animated animate__fadeInDown">Welcome to Biz Tracker</h1>
+    <p class="animate__animated animate__fadeInUp">Track profits. Manage stocks. Power your business.</p>
+    <p style="font-size: 20px;">
+ Biz Tracker is the first powerful tool in the BizSuit suite — crafted especially for solo founders, small business owners, and Indian entrepreneurs. With an intuitive dashboard, smart stock tracking, automatic profit calculations, and real-time insights, Biz Tracker helps you understand what’s working, what’s not, and where your business is heading. Simple. Fast. Effective. Built for the hustlers.
+    </p>
+
+
+    <a href="#features" class="btn btn-hero animate__animated animate__pulse animate__infinite">Launch Now</a>
+  </div>
+</section>
+
+<div class="glow-line"></div>
+
+<!-- Footer -->
+<footer class="animate__animated animate__fadeInUp">
+  <div class="container">
+    <p>&copy; 2025 BizSuit | Made with ❤️ WeCoded | All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1200 });
+</script>
+</body>
+</html>
